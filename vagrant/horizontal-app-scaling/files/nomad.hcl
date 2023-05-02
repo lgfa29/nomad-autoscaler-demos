@@ -9,10 +9,6 @@ server {
 
 client {
   enabled = true
-
-  host_volume "grafana" {
-    path = "/opt/nomad-volumes/grafana"
-  }
 }
 
 plugin "docker" {

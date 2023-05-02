@@ -15,10 +15,6 @@ job "prometheus" {
         image = "prom/prometheus:v2.38.0"
         ports = ["prometheus_ui"]
 
-        # Use `host` network so we can communicate with the Nomad
-        # agents running in the host and scrape their metrics.
-        network_mode = "host"
-
         args = [
           "--config.file=/etc/prometheus/config/prometheus.yml",
           "--storage.tsdb.path=/prometheus",
